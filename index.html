@@ -57,7 +57,7 @@
         <div class="row" style="margin-top:-20px;">
           <div class="col-sm-12 col-md-12">
             <p class="title_text"> Kylin is an open source Distributed Analytical Engine from eBay Inc. to provide SQL interface and multi-dimensional analysis (OLAP) on Hadoop to support extremely large petabytes of data analysis.</p>
-             <img src="assets/images/kylin_diagram.png">
+             <img id="diagram" src="assets/images/kylin_diagram.png">
           </div>
         </div>
       </div>
@@ -72,62 +72,30 @@
   </div>
   <!-- /container --> 
   
-  <!-- second -->
-  <section id="first" class="main">
-    <header style="background-color:#efefef;">
-      <div class="container" >
-        <h4 class="section-title"><span>Kylin Ecosystem</span></h4>
-        <div class="row">
-          <div class="col-sm-12 col-md-12"> 
-           <p> </p>
-           <ul>
-             <p><b>Kylin Core:</b> Fundamental framework of Kylin OLAP Engine comprises of metadata engine, query engine, job engine and storage engine to run the entire stack. It also includes a REST Server to service client requests</p>
-           </ul>
-
-           <ul>
-            <p><b>Extensions:</b> Plugins to support for additional functions
-            </p>
-           </ul>
-           <ul><p><b>Integration:</b> Lifecycle Management Support to integrate with job scheduler,  ETL, monitoring and alerting systems </p></ul>
-           <ul><p><b>User Interface:</b> Allows for third party users to build more features via user-interface atop Kylin core</p></ul>
-           <ul><p><b>Drivers:</b> ODBC and JDBC drivers to support different tools and products, such as Tableau</p></ul>
-           
-        </div>
-      
-      </div>
-      <!-- /container --> 
-      
-    </header>
-  </section>
   
  <section id="second" class="main">
-    <header >
-      <div class="container" >
+    <header style="background-color:#efefef;">
+      <div class="container"  >
         <h4 class="section-title"><span> What is Kylin? </span></h4>
          <!-- second-->
   <div class="row">
           <div class="col-sm-12 col-md-12">
             <div align="left">
-            <span>Extremely Fast OLAP Engine at scale:</span>
-            <p>Kylin is designed to reduce query latency on Hadoop for 10+B rows of data.</p>
-            <span>ANSI-SQL Interface on Hadoop:</span>
-            <p>Kylin offers ANSI-SQL on Hadoop and supports most ANSI-SQL query functions.</p>
-            <span>Interactive Query Capability:</span>
-            <p>Users can interact with Hadoop data via Kylin Cubes at sub-second latency, better than Hive queries for the same dataset</p>
-            <span>Pre-Built Data Model:</span>
-            <p>User can define a data model and pre-build in Kylin with more than 10+ billions of raw data records.</p>
-            <span>Seamless integration with BI Tools:</span>
-            <p>Kylin currently offers integration capabilities with Business Intelligence Tools such as Tableau and 3rd party web application. Support for other tools like Microstrategy and Excel is coming soon.</p>
+            <p> <b>- Extremely Fast OLAP Engine at scale: </b><br/> <div class="indent">Kylin is designed to reduce query latency on Hadoop for 10+B rows of data.</div></p>
             
-            <p>Other Highlights:</p>
- <li>Job Management and Monitoring</li>
- <li>Compression and Encoding Support</li>
- <li>Incremental Refresh of Cubes</li>
- <li>Leverage HBase Coprocessor for query latency</li>
- <li>Approximate Query Capability for distinct Count (HyperLogLog)</li>
- <li>Easy Web interface to manage, build, monitor and query cubes</li>
- <li>Security capability to set ACL at Cube/Project Level</li>
- <li>Support LDAP Integration</li>
+              <p> <b>- ANSI-SQL Interface on Hadoop: </b><br/> <div class="indent">Kylin offers ANSI-SQL on Hadoop and supports most ANSI-SQL query functions.</div></p>
+              <p> <b>- Interactive Query Capability: </b><br/> <div class="indent">Users can interact with Hadoop data via Kylin Cubes at sub-second latency, better than Hive queries for the same dataset</div></p>
+				<p> <b>- Pre-Built Data Model:</b><br/> <div class="indent">User can define a data model and pre-build in Kylin with more than 10+ billions of raw data records.</div></p>
+                
+                		<p> <b>- Seamless Integration with BI Tools:</b><br/> <div class="indent">Kylin currently offers integration capabilities with Business Intelligence Tools such as Tableau and 3rd party web application. Support for other tools like Microstrategy and Excel is coming soon.</div></p>
+                        
+                        
+                        <p> <b>- Other Highlights:</b> <br/> <div class="indent">- Job Management and Monitoring <br/> - Compression and Encoding Support <br/> - Incremental Refresh of Cubes <br/>  - Leverage HBase Coprocessor for query latency <br/> - Approximate Query Capability for distinct Count (HyperLogLog) <br/> - Easy Web interface to manage, build, monitor and query cubes <br/> - Security capability to set ACL at Cube/Project Level <br/> - Support LDAP Integration
+                        
+                        </div>                    </p>
+
+            
+            
 
            
           </div>
@@ -139,6 +107,32 @@
   </section>
 
   
+  <!-- second -->
+  <section id="first" class="main">
+    <header>
+      <div class="container" >
+        <h4 class="section-title"><span>Kylin Ecosystem</span></h4>
+        <div class="row">
+          <div class="col-sm-7 col-md-7"> 
+           <p> </p>
+             <p><b>Kylin Core:</b> Fundamental framework of Kylin OLAP Engine comprises of metadata engine, query engine, job engine and storage engine to run the entire stack. It also includes a REST Server to service client requests</p>
+       
+
+         
+            <p><b>Extensions:</b> Plugins to support for additional functions
+            </p>
+           <p><b>Integration:</b> Lifecycle Management Support to integrate with job scheduler,  ETL, monitoring and alerting systems </p>           <p><b>User Interface:</b> Allows for third party users to build more features via user-interface atop Kylin core</p>           <p><b>Drivers:</b> ODBC and JDBC drivers to support different tools and products, such as Tableau</p>
+           
+        </div>
+        <div class="col-sm-5 col-md-5"> 
+        <img id="core" src="assets/images/core.png">
+        </div>
+      
+      </div>
+      <!-- /container --> 
+      
+    </header>
+  </section>
   
   <!-- fifth-->
   <section id="fifth" class="main">
@@ -146,10 +140,19 @@
       <div class="container" >
         <h4 class="section-title"><span>For Developers</span></h4>
         <div class="row">
-          <div class="col-sm-12 col-md-12"> </div>
-          <p>Source Code: <a href="https://github.com/KylinOLAP/Kylin" target="_blank">Fork me on GitHub</a></p>
-          <p>Google Group: <a href="https://groups.google.com/forum/#!forum/kylin-olap" target="_blank">Kylin OLAP Group</a></p>
-          <p>Developer Mail: <a href="mailto:kylin-olap@googlegroups.com" target="_blank">kylin-olap@googlegroups.com</a></p>
+          <div class="col-sm-4 col-md-4"> 
+          <p><b>Source Code:</b> <a href="https://github.com/KylinOLAP/Kylin" target="_blank">Fork me on GitHub</a></p>
+          
+          </div>
+          
+                 <div class="col-sm-4 col-md-4"> 
+          
+          <p><b>Google Group:</b> <a href="https://groups.google.com/forum/#!forum/kylin-olap" target="_blank"> Kylin OLAP Group</a></p>
+          </div>
+          
+                 <div class="col-sm-4 col-md-4"> 
+          <p><b>Developer Mail:</b> <a href="mailto:kylin-olap@googlegroups.com" target="_blank"> kylin-olap@googlegroups.com</a></p>
+          </div>
         </div>
       </div>
       <!-- /container --> 
