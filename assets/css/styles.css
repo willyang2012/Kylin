@@ -456,6 +456,75 @@ img {
 
 
 **********************************************************************/
+
+/*ul.icons {
+	cursor: default;
+}
+ul.icons li {
+	display: inline-block;
+	padding-left: 1em;
+}
+ul.icons a {
+	font-size:2em;
+	display: inline-block;
+	/*width: 2.75em;
+	height: 2.75em;
+	line-height: 2.8em;
+	text-align: center;
+	border: 0;
+	box-shadow: inset 0 0 0 1px #e6e6e6;
+	border-radius: 100%;
+	color: #aaa;
+	-moz-transition: background-color 0.25s ease-in-out;
+	-webkit-transition: background-color 0.25s ease-in-out;
+	-o-transition: background-color 0.25s ease-in-out;
+	-ms-transition: background-color 0.25s ease-in-out;
+	transition: background-color 0.25s ease-in-out;
+}
+ul.icons a:hover {
+	background: rgba(0,0,0,0.025);
+}*/
+
+
+ul.icons
+		{
+			position: relative;
+			background: rgba(128,128,128,0.05);
+			border-radius: 4em;
+			display: inline-block;
+			padding: 0.35em 0.75em 0.35em 0.75em;
+			font-size: 1.45em;
+			cursor: default;
+			
+		}
+		
+			ul.icons li
+			{
+				display: inline-block;
+			}
+
+				ul.icons li a
+				{
+					display: inline-block;
+					background: none;
+					width: 2.5em;
+					height: 2.5em;
+					line-height: 2.5em;
+					text-align: center;
+					border-radius: 100%;
+					border: 0;
+					color: inherit;
+				}
+				
+					ul.icons li a:hover
+					{
+						color: #ef8376;
+					}
+
+		ol.style1
+		{
+		}
+		
 #footer {
 	background: #232323;
 	padding: 30px 0 0 0;
