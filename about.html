@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
 <!-- Fonts -->
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,600,700">
 
 <!-- Icons -->
 <link rel="stylesheet" href="assets/css/font-awesome.min.css">
@@ -44,9 +44,9 @@
         <ul class="nav navbar-nav">
           <li><a href="index.html">Home</a></li>
           <li><a href="document.html" >Docs</a></li>
-          <li><a href="#"><b>Community</b></a></li>          
+          <li><a href="#">Community</a></li>          
           <li><a href="https://github.com/KylinOLAP/Kylin" target="_blank">github</a></li>
-          <li><a href="about.html" >About</a></li>
+          <li><a href="about.html"><b>About</b></a></li>
         </ul>
       </div>
       <!--/.nav-collapse --> 
@@ -57,34 +57,70 @@
   <div class="container" >
     <div id="zero" class=" main" >
       <header style=" padding:2em 0 4em 0">
-        <div class="container" >
-          <h4 class="section-title"><span>Kylin Community</span></h4>
-          <div class="row" style="margin-top:-20px;">
+        <div class="container">
+          <h4 class="section-title"><span>Kylin Contributors</span></h4>
+          <div class="row" style="margin-top:-20px;" id="contributors">
+          <p class="core_team">Kylin is an open source project from eBay, migrated from internal github repo into Github repo without history information:-(</p>
             <div class="col-sm-4 col-md-4">
-              <p class="big_text">EVENTS</p>
-              <p><a href="http://www.meetup.com/Cloud-at-ebayinc/events/212077912/" target="_blank">Kylin Meetup @Bay Area</a> 
-              <br/>Date - Thursday, October 9, 2014 <br/>
-                Meeting Place - eBay Inc campus at 2211 N First Street, San Jose, CA 95131 </p>
-
-              <p><a href="http://2014ebay.csdn.net/m/zone/ebay_en/" target="_blank">Shanghai Big Data Summit 2014 </a> 
-              <br/>Date - October 25th, 2014 <br/>
-                Kylin will be presented by Jiang Xu, Cheif Architect of Kylin</p>
-                  
+              <p class="normal_text people_name">Luke Han <a href="https://github.com/lukehan" target="_blank">(lukehan)</a></p>
+              <p><span class="people_intro">Full-Time eBay Employee (Project Lead)</span><br/><span class="maintain">Maintains:</span><br/>
+<span class="maintains">- Releases</span><br/>
+<span class="maintains">- Roadmap</span></p>
+        
             </div>
+       
             <div class="col-sm-4 col-md-4">
-              <p class="big_text">DISCUSSION</p>
-              <p>The <a href="https://groups.google.com/forum/#!forum/kylin-olap" target="_blank">Google Group </a> is the place for discussion of Kylin features</p>
-              <p>The official Kylin Twitter account: <a href="https://twitter.com/KylinOLAP" target="_blank"> @KylinOLAP</a></p>
+              <p class="normal_text people_name">Jiang Xu <a href="https://github.com/jiangxuchina" target="_blank">(jiangxuchina)</a></p>
+              <p><span class="people_intro">Full-Time eBay Employee (Cheif Architect)</span><br/><span class="maintain">Maintains:</span><br/>
+<span class="maintains">- Architecture & Design</span><br/>
+<span class="maintains">- Query Engine</span></p>
+        
             </div>
+            
             <div class="col-sm-4 col-md-4">
-              <p class="big_text">DEVELOPMENT</p>
-              <p>All development takes place at <a href="https://github.com/KylinOLAP" target="_blank">https://github.com/KylinOLAP </a>.
-                
-                <!--<p>If you are interested in contributing to Kylin, please first read the contribution guide.</p>--> 
-                
-              </p>
+              <p class="normal_text people_name">Yang Li <a href="https://github.com/liyang-gmt8" target="_blank">(liyang-gmt8)</a></p>
+              <p><span class="people_intro">Full-Time eBay Employee (Tech Lead)</span><br/><span class="maintain">Maintains:</span><br/>
+<span class="maintains">- Query Engine</span><br/>
+<span class="maintains">- Job Engine</span><br/>
+<span class="maintains">- Storage Engine</span></p>
+        
             </div>
+          
           </div>
+          
+          <div class="row"  id="contributors2">
+         
+            <div class="col-sm-4 col-md-4">
+              <p class="normal_text people_name">Yi Song <a href="https://github.com/songyi10011001" target="_blank">(songyi10011001)</a></p>
+              <p><span class="people_intro">Full-Time eBay Employee</span><br/><span class="maintain">Maintains:</span><br/>
+<span class="maintains">- Job Engine</span><br/>
+<span class="maintains">- Build System</span></p>
+        
+            </div>
+       
+            <div class="col-sm-4 col-md-4">
+              <p class="normal_text people_name">Hongbin Ma <a href="https://github.com/binmahone" target="_blank">(binmahone)</a></p>
+              <p><span class="people_intro">Full-Time eBay Employee</span><br/><span class="maintain">Maintains:</span><br/>
+<span class="maintains">- ODBC Driver</span><br/>
+<span class="maintains">- Metadata Engine</span></p>
+        
+            </div>
+            
+            <div class="col-sm-4 col-md-4">
+              <p class="normal_text people_name">Xiaodong Duo <a href="https://github.com/xduo" target="_blank">(xduo)</a></p>
+              <p><span class="people_intro">Full-Time eBay Employee (Tech Lead)</span><br/><span class="maintain">Maintains:</span><br/>
+<span class="maintains">- Job Engine</span><br/>
+<span class="maintains">- REST Server</span><br/>
+<span class="maintains">- JDBC Driver</span></p>
+        
+            </div>
+          
+          </div>
+          
+       
+             <p class="normal_text">Participant: <p>
+             <p class="normal_text participant">Rui Feng <a href="https://github.com/fengrui129" target="_blank">(fengrui129)</a></p>
+          
         </div>
         <!-- /container --> 
         
