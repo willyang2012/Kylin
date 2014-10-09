@@ -1,15 +1,9 @@
 jQuery(document).ready(function ($) {
-
-
-
-    // @Patrick  the fixed top nav code  start from here
-
-    //top nav
+	 //top nav
     var my_nav = $('.navbar-sticky');
-    // grab the initial top offset of the navigation 
     var sticky_navigation_offset_top = my_nav.offset().top;
 
-    // function to decide weather the navigation bar should have fixed css position or not.
+
     var sticky_navigation = function () {
         //  current vertical position from the top
         var scroll_top = $(window).scrollTop();
@@ -57,13 +51,18 @@ jQuery(document).ready(function ($) {
             $('#core').removeClass("animated fadeInRight");
         }
 
-
-
-
-
-
-
     }
+	
+	//document page 
+	$( "#content-container" ).load("docs/intro-content.html");
+	$( "#left-menu li" ).eq(0).css("background-color", "#efefef");
+
+    $( "#left-menu li" ).click(function(){
+		var selectedID = $(this).attr("id");
+		$("#content-container").load( "docs/"+selectedID+"-content.html", function() { $(this).fadeIn(500);});
+		$(this).css("background-color", "#efefef");
+		$(this).siblings().css("background-color", "transparent")
+		});
  
 
 
