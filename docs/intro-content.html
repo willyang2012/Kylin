@@ -11,27 +11,27 @@
 </head>
 <body>
 
-<h5 class="content-header">What should I use Kylin for?</h5>
+<p class="content-header" style="margin-top:0.25em">What should I use Kylin for?</p>
 <p class="content-p">
 If you want to do multi-dimension analysis on large data set (billion+) with low query latency (second-), Kylin is a good option. Moreover, Kylin provide good integration with existing BI tools (e.g Tableau).
 </p>
 
 <hr/>
  
-<h5 class="content-header">Why existing SQL-on-Hadoop solutions fall short?</h5>
+<p class="content-header">Why existing SQL-on-Hadoop solutions fall short?</p>
 <p class="content-p">
 The existing SQL-on-Hadoop needs to scan partial or whole data set to answer the query. Due to the large data scan, many queries are very slow (minute+).  
 </p>
 <hr/>
  
-<h5 class="content-header">What is MOLAP/ROLAP?</h5>
+<p class="content-header">What is MOLAP/ROLAP?</p>
 <p class="content-p">
 MOLAP (Multi-dimensional OLAP) is to pre-compute data along different dimensions of interest and store resultant values in the cube. MOLAP is much faster but is inflexible.
 ROLAP (Relational-OLAP) is to use star or snow-flake schema to do runtime aggregation. ROLAP is flexible but much slower.
 </p>
 <hr/>
 
-<h5 class="content-header">How does Kylin support ROLAP/MOLAP?</h5>
+<p class="content-header">How does Kylin support ROLAP/MOLAP?</p>
 <p class="content-p">
 Kylin will build data cube (MOLAP) from hive table (ROLAP) according to the metadata definition.
 If the query can be fulfilled by data cube, Kylin will route the query to data cube that is MOLAP.
@@ -39,7 +39,7 @@ If the query can’t be fulfilled by data cube, Kylin will route the query to hi
 Basically, you can think Kylin as HOLAP on top of MOLAP and ROLAP. 
 </p>
 <hr/>
-<h5 class="content-header">What does a Kylin query look like?</h5>
+<p class="content-header">What does a Kylin query look like?</p>
 <p class="content-p">
 Kylin supports join, projection, filter, aggregation, groups and sub-query. For example:
 <div align="left">
@@ -47,7 +47,7 @@ select test_cal_dt.week_beg_dt, test_category.lv1_categ, test_category.lv2_categ
 </div>
 <hr/>
 
-<h5 class="content-header">What Hadoop components does it work with?</h5>
+<p class="content-header">What Hadoop components does it work with?</p>
 <p class="content-p">
 Kylin depends on HDFS, MapReduce, Hive and HBase.
 Hive and MapReduce is used for cube building. Hive is used for pre-join and MapReduce is used for pre-aggregation.
@@ -56,7 +56,7 @@ HBase is used to store data cube and answer the query. HBase coprocessor is also
 </p>
 <hr/>
 
-<h5 class="content-header">Where can I find the technical details about Kylin?</h5>
+<p class="content-header">Where can I find the technical details about Kylin?</p>
 <p class="content-p"><a href="http://www.slideshare.net/XuJiang2/kylin-hadoop-olap-engine">Kylin OLAP</a></p>
 
 </body>

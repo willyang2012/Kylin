@@ -531,8 +531,11 @@ a.section-menu-title:hover{
 .content-p{
 	margin-top:1em !important;}
 
+
+
 .content-header{
 	text-align:left;
+	font-weight:bold !important;
 	}
 
 /*********************************************************************
