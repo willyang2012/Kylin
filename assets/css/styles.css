@@ -514,14 +514,14 @@ a.section-menu-title:hover{
 	}
 
 #contributors2{
-	border-bottom:1px dashed #CCC;
+	border-bottom:1px dashed #cfcfcf;
 		padding-bottom:1.4em
 	}
 
 .core_team{
 	text-align:center !important; font-size:1.2em !important;
 	padding-bottom:2em !important;
-	border-bottom:1px dashed #CCC;
+	border-bottom:1px dashed #cfcfcf;
 	}
 
 .participant{
