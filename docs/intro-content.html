@@ -43,7 +43,8 @@ Basically, you can think Kylin as HOLAP on top of MOLAP and ROLAP.
 <p class="content-p">
 Kylin supports join, projection, filter, aggregation, groups and sub-query. For example:
 <div align="left">
-select test_cal_dt.week_beg_dt, test_category.lv1_categ, test_category.lv2_categ, test_kylin_fact.format_name, test_sites.site_name, sum(test_kylin_fact.price) as total_price, count(*) as total_count from test_kylin_fact left join test_cal_dt on test_kylin_fact.cal_dt = test_cal_dt.cal_dt left join test_category on test_kylin_fact.leaf_categ_id = test_category.leaf_categ_id and test_kylin_fact.site_id = test_category.site_id left join test_sites on test_kylin_fact.site_id = test_sites.site_id where test_kylin_fact.seller_id = 123456 or test_kylin_fact.format_name = 'New' group by test_cal_dt.week_beg_dt, test_category.lv1_categ, test_category.lv2_categ, test_kylin_fact.format_name, test_sites.site_name
+
+<pre class="prettyprint" style="margin-top:1em;">select test_cal_dt.week_beg_dt, test_category.lv1_categ, test_category.lv2_categ, test_kylin_fact.format_name, test_sites.site_name, sum(test_kylin_fact.price) as total_price, count(*) as total_count from test_kylin_fact left join test_cal_dt on test_kylin_fact.cal_dt = test_cal_dt.cal_dt left join test_category on test_kylin_fact.leaf_categ_id = test_category.leaf_categ_id and test_kylin_fact.site_id = test_category.site_id left join test_sites on test_kylin_fact.site_id = test_sites.site_id where test_kylin_fact.seller_id = 123456 or test_kylin_fact.format_name = 'New' group by test_cal_dt.week_beg_dt, test_category.lv1_categ, test_category.lv2_categ, test_kylin_fact.format_name, test_sites.site_name</pre>
 </div>
 <hr/>
 
@@ -58,6 +59,8 @@ HBase is used to store data cube and answer the query. HBase coprocessor is also
 
 <p class="content-header">Where can I find the technical details about Kylin?</p>
 <p class="content-p"><a href="http://www.slideshare.net/XuJiang2/kylin-hadoop-olap-engine">Kylin OLAP</a></p>
+
+
 
 </body>
 </html>
