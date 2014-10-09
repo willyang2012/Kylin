@@ -11,10 +11,47 @@
 </head>
 <body>
 
-<p>Coming soon...    Thanks for your patience!</p>
+<h4>What should I use Kylin for?</h4>
+<p>
+If you want to do multi-dimension analysis on large data set (billion+) with low query latency (second-), Kylin is a good option. Moreover, Kylin provide good integration with existing BI tools (e.g Tableau).
+</p>
+ 
+<h4>Why existing SQL-on-Hadoop solutions fall short?</h4>
+<p>
+The existing SQL-on-Hadoop needs to scan partial or whole data set to answer the query. Due to the large data scan, many queries are very slow (minute+).  
+</p>
+ 
+<h4>What is MOLAP/ROLAP?</h4>
+<p>
+MOLAP (Multi-dimensional OLAP) is to pre-compute data along different dimensions of interest and store resultant values in the cube. MOLAP is much faster but is inflexible.
+ROLAP (Relational-OLAP) is to use star or snow-flake schema to do runtime aggregation. ROLAP is flexible but much slower.
+</p>
+ 
+<h4>How does Kylin support ROLAP/MOLAP?</h4>
+<p>
+Kylin will build data cube (MOLAP) from hive table (ROLAP) according to the metadata definition.
+If the query can be fulfilled by data cube, Kylin will route the query to data cube that is MOLAP.
+If the query can’t be fulfilled by data cube, Kylin will route the query to hive table that is ROLAP.
+Basically, you can think Kylin as HOLAP on top of MOLAP and ROLAP. 
+</p>
+ 
+<h4>What does a Kylin query look like?</h4>
+<p>
+Kylin supports join, projection, filter, aggregation, groups and sub-query. For example:
+<div>
+select test_cal_dt.week_beg_dt, test_category_groupings.lv1_categ, test_category_groupings.lv2_categ, test_kylin_fact.format_name, test_sites.site_name, sum(test_kylin_fact.price) as total_price, count(*) as total_count from test_kylin_fact left join test_cal_dt on test_kylin_fact.cal_dt = test_cal_dt.cal_dt left join test_category_groupings on test_kylin_fact.leaf_categ_id = test_category_groupings.leaf_categ_id and test_kylin_fact.site_id = test_category_groupings.site_id left join test_sites on test_kylin_fact.site_id = test_sites.site_id where test_kylin_fact.seller_id = 10000002 or test_kylin_fact.format_name = 'Auction' group by test_cal_dt.week_beg_dt, test_category_groupings.lv1_categ, test_category_groupings.lv2_categ, test_kylin_fact.format_name, test_sites.site_name
+</div>
 
+<h4>What Hadoop components does it work with?</h4>
+<p>
+Kylin depends on HDFS, MapReduce, Hive and HBase.
+Hive and MapReduce is used for cube building. Hive is used for pre-join and MapReduce is used for pre-aggregation.
+HDFS is used to store intermediated files during cube building.
+HBase is used to store data cube and answer the query. HBase coprocessor is also used for query processing.
+</p>
 
-
+<h4>Where can I find the technical details about Kylin?</h4>
+<a href="http://www.slideshare.net/XuJiang2/kylin-hadoop-olap-engine">Kylin OLAP</a>
 
 </body>
 </html>
