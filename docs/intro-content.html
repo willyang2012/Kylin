@@ -13,14 +13,14 @@
 
 <p class="content-header" style="margin-top:0.25em">What should I use Kylin for?</p>
 <p class="content-p">
-If you want to do multi-dimension analysis on large data set (billion+) with low query latency (second-), Kylin is a good option. Moreover, Kylin provide good integration with existing BI tools (e.g Tableau).
+If you want to do multi-dimension analysis on large data sets (billion+ rows) with low query latency (sub-seconds), Kylin is a good option. Kylin also provides good integration with existing BI tools (e.g Tableau).
 </p>
 
 <hr/>
  
 <p class="content-header">Why existing SQL-on-Hadoop solutions fall short?</p>
 <p class="content-p">
-The existing SQL-on-Hadoop needs to scan partial or whole data set to answer the query. Due to the large data scan, many queries are very slow (minute+).  
+The existing SQL-on-Hadoop needs to scan partial or whole data set to answer a user query. Due to large data scan, many queries are very slow (minute+ latency).  
 </p>
 <hr/>
  
@@ -33,7 +33,7 @@ ROLAP (Relational-OLAP) is to use star or snow-flake schema to do runtime aggreg
 
 <p class="content-header">How does Kylin support ROLAP/MOLAP?</p>
 <p class="content-p">
-Kylin will build data cube (MOLAP) from hive table (ROLAP) according to the metadata definition.
+Kylin builds data cube (MOLAP) from hive table (ROLAP) according to the metadata definition.
 If the query can be fulfilled by data cube, Kylin will route the query to data cube that is MOLAP.
 If the query can’t be fulfilled by data cube, Kylin will route the query to hive table that is ROLAP.
 Basically, you can think Kylin as HOLAP on top of MOLAP and ROLAP. 
